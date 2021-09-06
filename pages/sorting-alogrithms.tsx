@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
-
-import { Footer } from '../components/Footer';
+import { SortingDemo } from '../components/Sorting';
 import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
+export default function SortingAlogrithms() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Algorithms and Data-Structures</title>
+        <title>Sorting | Algorithms and Data-Structures</title>
         <meta
           name="description"
           content="This is a collection of algorithms and datastructures in typescript"
@@ -21,28 +21,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Algorithms and Data-Structures</h1>
+        <h1 className={styles.title}>Sorting</h1>
 
         <p className={styles.description}>
           a collection by <a href="http://twitter.com/motcodes">@motcodes</a>
         </p>
 
         <div className={styles.grid}>
-          <Link href="/sorting-alogrithms/">
-            <a className={styles.card}>
-              <h2>Sorting &rarr;</h2>
-              <p>
-                There are various Algorithms that can be used to arrange data in
-                an ordered way.
-              </p>
-            </a>
-          </Link>
+          <SortingDemo />
         </div>
       </main>
-
-      <Footer />
     </div>
   );
-};
-
-export default Home;
+}

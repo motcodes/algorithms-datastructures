@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
-import { generateRandomArray } from '../algorithms/randomArray';
+import { generateRandomArray } from '../helper';
 import {
   insertionSort,
   mergeSort,

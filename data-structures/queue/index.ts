@@ -1,8 +1,8 @@
-import { LinkedNode } from '../Node/linked-node';
+import { Node } from '../node';
 
 export class Queue<T> {
-  public head: LinkedNode<T> | null;
-  public tail: LinkedNode<T> | null;
+  public head: Node<T> | null;
+  public tail: Node<T> | null;
   public length: number = 0;
 
   constructor() {
@@ -11,7 +11,7 @@ export class Queue<T> {
   }
 
   public push(item: T): void {
-    const newList = new LinkedNode<T>(item);
+    const newList = new Node<T>(item);
     if (!this.head) {
       this.head = newList;
       this.tail = this.head;

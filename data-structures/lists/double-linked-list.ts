@@ -1,9 +1,9 @@
-import { LinkedNode } from '../Node/linked-node';
+import { Node } from '../node';
 import { IList } from './IList';
 
 export class DoubleLinkedList<T> implements IList<T> {
-  public head: LinkedNode<T> | null;
-  public tail: LinkedNode<T> | null;
+  public head: Node<T> | null;
+  public tail: Node<T> | null;
   public length: number = 0;
 
   constructor() {
@@ -12,7 +12,7 @@ export class DoubleLinkedList<T> implements IList<T> {
   }
 
   public add(element: T): void {
-    const newList: LinkedNode<T> = new LinkedNode<T>(element);
+    const newList: Node<T> = new Node<T>(element);
     if (this.head === null) {
       this.head = newList;
       this.tail = this.head;
@@ -43,8 +43,8 @@ export class DoubleLinkedList<T> implements IList<T> {
 
   public deleteAtIndex(index: number): void {
     let count: number = 0;
-    let current: LinkedNode<T> | null = this.head;
-    let previous: LinkedNode<T> | null = current;
+    let current: Node<T> | null = this.head;
+    let previous: Node<T> | null = current;
     while (count <= index) {
       if (count === index && previous && current) {
         previous.next = current.next;

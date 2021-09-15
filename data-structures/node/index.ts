@@ -1,7 +1,7 @@
-export class LinkedNode<T> {
+export class Node<T> {
   public value: T;
-  public next: LinkedNode<T> | null;
-  public prev: LinkedNode<T> | null;
+  public next: Node<T>;
+  public prev: Node<T>;
 
   constructor(value: T) {
     this.value = value;
